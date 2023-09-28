@@ -1,0 +1,238 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the entire page */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header with background color and center the text */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color:#333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/* Style the main content */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the links in the article */
+article a {
+    color: #0078d4;
+    text-decoration: underline;
+}
+
+/* Style the delete and edit links */
+h3 a {
+    color: #e74c3c;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* Add hover effect to links */
+a:hover {
+    text-decoration: underline;
+}
+#comments-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#comments-container {
+    max-height: 300px; /* Set a max height for the comments container */
+    overflow-y: auto; /* Enable vertical scrolling if comments overflow */
+}
+
+.comment {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Comment Input Form */
+#comment-form-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#comment-form {
+    display: block;
+}
+
+#comment-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#comment-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Comments Section */
+#comments-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#comments-container {
+    max-height: 300px; /* Set a max height for the comments container */
+    overflow-y: auto; /* Enable vertical scrolling if comments overflow */
+}
+
+.comment {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Comment Input Form */
+#comment-form-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#comment-form {
+    display: block;
+}
+
+#comment-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#comment-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Style form fields if needed */
+#comment-form input[type="text"],
+#comment-form textarea {
+    width: auto;
+    height:fit-content;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Style form labels if needed */
+#comment-form label {
+    font-weight: bold;
+}
+
+/* Comments Section */
+#comments-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Comments Section */
+#comments-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Comments Container */
+#comments-container {
+    max-height: 400px; /* Set a maximum height for the comment container */
+    overflow-y: auto; /* Enable vertical scrolling when content exceeds the container */
+    display: flex;
+    flex-direction: column; /* Arrange comments vertically */
+    gap: 20px;
+}
+
+/* Comment Item */
+.post-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    flex-grow: 1;
+    width:30%;
+     /* Allow items to grow vertically */
+}
+
+/* Comment Inner */
+.post-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Comment Author and Date */
+h3,
+h6 {
+    margin: 0;
+}
+
+/* Add responsive breakpoints for smaller screens */
+@media (max-width: 768px) {
+    #comments-container {
+        max-height: none; /* Remove the maximum height on smaller screens */
+    }
+}

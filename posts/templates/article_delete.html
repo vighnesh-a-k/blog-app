@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/article_delete.css' %}">
+    <meta charset="UTF-8">
+    <title>Delete Article</title>
+</head>
+<body>
+    <h1>Delete Article</h1>
+    <p>Are you sure you want to delete the article "{{ post.title }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
+    <a href="{% url 'home' %}">Cancel</a>
+</body>
+</html>

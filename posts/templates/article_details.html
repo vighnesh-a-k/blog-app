@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ article.title }}</title>
+    
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/article_details.css' %}">
+    
+    
+</head>
+<body>
+    <header>
+       
+        <nav>
+            <ul>
+        
+            <a href="{% url 'post_delete' post.id %}">Delete</a>
+            <a href="{% url 'post_edit' post.id %}">Edit</a>
+            <a href="{% url 'home' %}">Back</a>
+            </ul>
+            </nav>
+            <h1>{{ post.title }}</h1>
+    </header>
+    
+    <main>
+        <article>
+            <p><strong>Author:</strong> {{ post.author.username }}</p>
+            <p><strong>Publish Date:</strong> {{ post.publish_date }}</p>
+            <p>{{ post.content }}</p>
+        </article>
+    </main>
+
+
+    <section id="comments-section">
+        <h2>Comments</h2>
+        <div id="comments-container">
+            {% for comment in comments %}
+            <div class="post-item">
+                <div class="post-inner">
+                <h3>{{ comment.author }}</h3>
+                <h6>{{comment.created_date}}</h6></div>
+                <p>{{ comment.text|truncatewords:40 }}</p>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </section>
+    
+    
+    <section id="comment-form-section">
+        <h2>Add a Comment</h2>
+        <form method="post" id="comment-form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Post Comment</button>
+        </form>
+    </section>
+
+    
+</body>
+</html>
